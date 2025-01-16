@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is Eclipse Metro/4.0.4 (RELEASE-4.0.4-ec440d5; 2024-06-28T10:09:00+0000) XMLWS-Impl/4.0.3 XMLWS-API/4.0.2 XMLB-Impl/4.0.5 XMLB-API/4.0.2 git-revision#ec440d5. --><xs:schema xmlns:tns="http://ricambiautoserver/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ricambiautoserver/">
+
+<xs:element name="aggiorna" type="tns:aggiorna"/>
+
+<xs:element name="aggiornaResponse" type="tns:aggiornaResponse"/>
+
+<xs:element name="elimina" type="tns:elimina"/>
+
+<xs:element name="eliminaResponse" type="tns:eliminaResponse"/>
+
+<xs:element name="inserisci" type="tns:inserisci"/>
+
+<xs:element name="inserisciResponse" type="tns:inserisciResponse"/>
+
+<xs:element name="modificaPrezzo" type="tns:modificaPrezzo"/>
+
+<xs:element name="modificaPrezzoResponse" type="tns:modificaPrezzoResponse"/>
+
+<xs:element name="prodotto" type="tns:prodotto"/>
+
+<xs:element name="trovaDaOrdinare" type="tns:trovaDaOrdinare"/>
+
+<xs:element name="trovaDaOrdinareResponse" type="tns:trovaDaOrdinareResponse"/>
+
+<xs:element name="trovaPerCategoria" type="tns:trovaPerCategoria"/>
+
+<xs:element name="trovaPerCategoriaResponse" type="tns:trovaPerCategoriaResponse"/>
+
+<xs:element name="trovaPerId" type="tns:trovaPerId"/>
+
+<xs:element name="trovaPerIdResponse" type="tns:trovaPerIdResponse"/>
+
+<xs:element name="trovaTutti" type="tns:trovaTutti"/>
+
+<xs:element name="trovaTuttiResponse" type="tns:trovaTuttiResponse"/>
+
+<xs:complexType name="trovaPerCategoria">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerCategoriaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:prodotto" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="prodotto">
+<xs:sequence>
+<xs:element name="categoria" type="xs:string" minOccurs="0"/>
+<xs:element name="disponibilita" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="prezzo" type="xs:double"/>
+<xs:element name="venduti" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="inserisci">
+<xs:sequence>
+<xs:element name="arg0" type="tns:prodotto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="inserisciResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="modificaPrezzo">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+<xs:element name="arg1" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificaPrezzoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaDaOrdinare">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaDaOrdinareResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:prodotto" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="elimina">
+<xs:sequence>
+<xs:element name="arg0" type="tns:prodotto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="aggiorna">
+<xs:sequence>
+<xs:element name="arg0" type="tns:prodotto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaPerId">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:prodotto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaTutti">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaTuttiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:prodotto" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

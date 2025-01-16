@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://Host-001.homenet.telecomitalia.it:8080/AbitanteEJBService/AbitanteEJB?wsdl" uri="wsdl/Host-001.homenet.telecomitalia.it_8080/AbitanteEJBService/AbitanteEJB.wsdl"/>
+    <system systemId="http://Host-001.homenet.telecomitalia.it:8080/AbitanteEJBService/AbitanteEJB?xsd=1" uri="wsdl/Host-001.homenet.telecomitalia.it_8080/AbitanteEJBService/AbitanteEJB.xsd_1.xsd"/>
+</catalog>

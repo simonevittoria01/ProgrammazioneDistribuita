@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by XML-WS Runtime (https://github.com/eclipse-ee4j/metro-jax-ws). Runtime's version is Eclipse Metro/4.0.4 (RELEASE-4.0.4-ec440d5; 2024-06-28T10:09:00+0000) XMLWS-Impl/4.0.3 XMLWS-API/4.0.2 XMLB-Impl/4.0.5 XMLB-API/4.0.2 git-revision#ec440d5. --><xs:schema xmlns:tns="http://canileserver/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://canileserver/">
+
+<xs:element name="adotta" type="tns:adotta"/>
+
+<xs:element name="adottaResponse" type="tns:adottaResponse"/>
+
+<xs:element name="aggiorna" type="tns:aggiorna"/>
+
+<xs:element name="aggiornaResponse" type="tns:aggiornaResponse"/>
+
+<xs:element name="cane" type="tns:cane"/>
+
+<xs:element name="elimina" type="tns:elimina"/>
+
+<xs:element name="eliminaResponse" type="tns:eliminaResponse"/>
+
+<xs:element name="inserisci" type="tns:inserisci"/>
+
+<xs:element name="inserisciResponse" type="tns:inserisciResponse"/>
+
+<xs:element name="trovaPerEta" type="tns:trovaPerEta"/>
+
+<xs:element name="trovaPerEtaResponse" type="tns:trovaPerEtaResponse"/>
+
+<xs:element name="trovaPerId" type="tns:trovaPerId"/>
+
+<xs:element name="trovaPerIdResponse" type="tns:trovaPerIdResponse"/>
+
+<xs:element name="trovaPerNome" type="tns:trovaPerNome"/>
+
+<xs:element name="trovaPerNomeResponse" type="tns:trovaPerNomeResponse"/>
+
+<xs:element name="trovaPerRazza" type="tns:trovaPerRazza"/>
+
+<xs:element name="trovaPerRazzaResponse" type="tns:trovaPerRazzaResponse"/>
+
+<xs:element name="trovaPerStato" type="tns:trovaPerStato"/>
+
+<xs:element name="trovaPerStatoResponse" type="tns:trovaPerStatoResponse"/>
+
+<xs:element name="trovaPerTaglia" type="tns:trovaPerTaglia"/>
+
+<xs:element name="trovaPerTagliaEeta" type="tns:trovaPerTagliaEeta"/>
+
+<xs:element name="trovaPerTagliaEetaResponse" type="tns:trovaPerTagliaEetaResponse"/>
+
+<xs:element name="trovaPerTagliaResponse" type="tns:trovaPerTagliaResponse"/>
+
+<xs:element name="trovaTutto" type="tns:trovaTutto"/>
+
+<xs:element name="trovaTuttoResponse" type="tns:trovaTuttoResponse"/>
+
+<xs:complexType name="adotta">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="adottaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiorna">
+<xs:sequence>
+<xs:element name="arg0" type="tns:cane" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cane">
+<xs:sequence>
+<xs:element name="chip" type="xs:string" minOccurs="0"/>
+<xs:element name="eta" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="razza" type="xs:string" minOccurs="0"/>
+<xs:element name="sesso" type="xs:string" minOccurs="0"/>
+<xs:element name="stato" type="xs:boolean"/>
+<xs:element name="taglia" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaTutto">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaTuttoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="elimina">
+<xs:sequence>
+<xs:element name="arg0" type="tns:cane" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="inserisci">
+<xs:sequence>
+<xs:element name="arg0" type="tns:cane" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="inserisciResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="trovaPerTagliaEeta">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerTagliaEetaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerRazza">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerRazzaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerNome">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerNomeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerStato">
+<xs:sequence>
+<xs:element name="arg0" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerStatoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerId">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerTaglia">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerTagliaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerEta">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="trovaPerEtaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cane" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
